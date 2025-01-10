@@ -16,7 +16,7 @@ import Post from './pages/Post.jsx';
 import AllPosts from './pages/AllPosts.jsx';
 
 import Protected from './components/AuthLayout.jsx'
-
+import NotFound from './components/NotFound.jsx'
 
 const router = createBrowserRouter([
   {
@@ -74,6 +74,10 @@ const router = createBrowserRouter([
             <Post />
           </Protected>
         )
+      },
+      {
+        path: "*",
+        element: <NotFound />
       }
     ]
   }
